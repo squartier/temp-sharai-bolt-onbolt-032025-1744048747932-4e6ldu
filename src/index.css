@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Prose Customization */
+.prose {
+  max-width: none;
+  color: #E0E0E0;
+}
+
+.prose h1 {
+  color: #E0E0E0;
+  font-size: 2.25em;
+  margin-top: 0;
+  margin-bottom: 0.8em;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.prose h2 {
+  color: #E0E0E0;
+  font-size: 1.75em;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+.prose h3 {
+  color: #E0E0E0;
+  font-size: 1.5em;
+  margin-top: 1.6em;
+  margin-bottom: 0.6em;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+.prose p {
+  margin: 1.2em 0;
+  line-height: 1.8;
+}
+
+.prose a {
+  color: #BB86FC;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.prose a:hover {
+  color: #9B66DC;
+  text-decoration: underline;
+}
+
+.prose ul {
+  margin: 1.2em 0;
+  padding-left: 1.5em;
+}
+
+.prose li {
+  margin: 0.5em 0;
+  padding-left: 0.5em;
+  line-height: 1.6;
+}
+
+.prose li::before {
+  content: "-";
+  color: #757575;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+/* Prose Customization */
+.prose {
+  max-width: none;
+  color: #E0E0E0 !important;
+  white-space: pre-wrap;
+}
+
+.prose-invert {
+  --tw-prose-body: #E0E0E0;
+  --tw-prose-headings: #E0E0E0;
+  --tw-prose-links: #BB86FC;
+  --tw-prose-bold: #E0E0E0;
+  --tw-prose-counters: #757575;
+  --tw-prose-bullets: #757575;
+  --tw-prose-hr: #2D2D2D;
+  --tw-prose-quotes: #E0E0E0;
+  --tw-prose-quote-borders: #2D2D2D;
+  --tw-prose-captions: #757575;
+  --tw-prose-code: #BB86FC;
+  --tw-prose-pre-code: #E0E0E0;
+  --tw-prose-pre-bg: #1A1B1E;
+  --tw-prose-th-borders: #2D2D2D;
+  --tw-prose-td-borders: #2D2D2D;
+}
+
+.prose p {
+  margin: 0.25em 0;
+  line-height: 1.75;
+}
+
+.prose ul {
+  margin: 0.35em 0;
+  padding-left: 1.625em;
+  list-style-type: none;
+}
+
+.prose li {
+  margin: 0.25em 0;
+  padding-left: 0.375em;
+  position: relative;
+}
+
+.prose li::before {
+  content: "-";
+  position: absolute;
+  left: -1.25em;
+  color: var(--tw-prose-bullets);
+}
+
+.prose a {
+  color: var(--tw-prose-links);
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.prose a:hover {
+  color: #9B66DC !important;
+}
+
+.prose strong {
+  color: var(--tw-prose-bold);
+  font-weight: 600;
+}
+
+.prose h1, .prose h2, .prose h3 {
+  color: var(--tw-prose-headings);
+  font-weight: 600;
+  line-height: 1.25;
+  margin-top: 0.75em;
+  margin-bottom: 0.35em;
+}
